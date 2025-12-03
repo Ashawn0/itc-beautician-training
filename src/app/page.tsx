@@ -2,145 +2,195 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getDictionary } from '@/lib/i18n'
 import CourseCard from '@/components/CourseCard'
+import ParallaxSection from '@/components/ParallaxSection'
+import AnimatedSection from '@/components/AnimatedSection'
+import { getBackgroundImage } from '@/utils/backgroundImages'
 
 export default async function Home() {
   const dict = await getDictionary('en')
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-brand-pink-light/30 py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+      {/* Hero Section with Parallax */}
+      <ParallaxSection
+        imageSrc={getBackgroundImage('hero')}
+        overlayOpacity={0.4}
+        overlayColor="dark"
+        minHeight="100vh"
+        className="flex items-center justify-center"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection animation="fadeLeft" className="text-center lg:text-left text-white">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg">
                 {dict.home.hero.heading}
               </h1>
-              <p className="text-lg lg:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+              <p className="text-xl lg:text-2xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-white/95 drop-shadow-md">
                 {dict.home.hero.subheading}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Link
                   href="/courses"
-                  className="bg-brand-pink-dark text-white px-8 py-3 rounded-full font-semibold hover:bg-pink-600 transition-colors shadow-lg hover:shadow-xl"
+                  className="btn-primary text-lg px-10 py-4"
                 >
                   {dict.common.viewCourses}
                 </Link>
                 <Link
                   href="/contact"
-                  className="bg-white text-brand-pink-dark border-2 border-brand-pink-dark px-8 py-3 rounded-full font-semibold hover:bg-brand-pink-light transition-colors"
+                  className="btn-secondary text-lg px-10 py-4 bg-white/90 hover:bg-white border-white"
                 >
                   {dict.common.contactUs}
                 </Link>
               </div>
-            </div>
-            <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <Image
-                src="/images/profandstudentmain.jpg"
-                alt="ITC Beautician Training"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fadeRight" delay={200} className="hidden lg:block">
+              <div className="relative h-[500px] xl:h-[600px] rounded-3xl overflow-hidden shadow-large transform transition-transform duration-500 hover:scale-105">
+                <Image
+                  src="/images/profandstudentmain.jpg"
+                  alt="ITC Beautician Training"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-rose-600/20 to-transparent" />
+              </div>
+            </AnimatedSection>
           </div>
         </div>
-        {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-gold-light/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-pink/20 rounded-full blur-3xl"></div>
-      </section>
+      </ParallaxSection>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="section-padding bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{dict.home.whyChooseUs.title}</h2>
-            <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <AnimatedSection animation="fadeUp" className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+              {dict.home.whyChooseUs.title}
+            </h2>
+            <div className="divider" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {dict.home.whyChooseUs.points.map((point, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow text-center group">
-                <div className="w-16 h-16 bg-brand-pink-light text-brand-pink-dark rounded-full flex items-center justify-center mx-auto mb-6 text-2xl group-hover:scale-110 transition-transform">
-                  {index + 1}
+              <AnimatedSection
+                key={index}
+                animation="fadeUp"
+                delay={index * 100 + 200}
+              >
+                <div className="bg-white p-10 rounded-2xl shadow-soft hover-lift text-center h-full">
+                  <div className="w-20 h-20 gradient-rose rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold text-rose-600 shadow-medium">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-2xl font-bold text-neutral-900 mb-4">{point.title}</h3>
+                  <p className="text-neutral-600 leading-relaxed">{point.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{point.title}</h3>
-                <p className="text-gray-600">{point.description}</p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
       {/* Featured Courses */}
-      <section className="py-20 bg-gray-50">
+      <section className="section-padding bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">{dict.home.featuredCourses.title}</h2>
-            <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <AnimatedSection animation="fadeUp" className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
+              {dict.home.featuredCourses.title}
+            </h2>
+            <div className="divider" />
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {dict.home.featuredCourses.courses.map((course, index) => (
-              <CourseCard key={index} course={course} featured />
+              <AnimatedSection
+                key={index}
+                animation="fadeUp"
+                delay={index * 100}
+              >
+                <CourseCard course={course} featured />
+              </AnimatedSection>
             ))}
           </div>
-          <div className="text-center mt-12">
+
+          <AnimatedSection animation="fadeUp" delay={400} className="text-center mt-16">
             <Link
               href="/courses"
-              className="inline-flex items-center text-brand-pink-dark font-semibold hover:text-pink-700"
+              className="inline-flex items-center gap-3 text-rose-600 font-bold text-lg hover:text-rose-700 transition-colors group"
             >
-              View All Courses
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>View All Courses</span>
+              <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* Trainer Highlight */}
-      <section className="py-20 bg-white overflow-hidden">
+      {/* Trainer Highlight with Parallax */}
+      <ParallaxSection
+        imageSrc={getBackgroundImage('trainer')}
+        overlayOpacity={0.85}
+        overlayColor="light"
+        minHeight="700px"
+        className="flex items-center"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2 relative">
-              <div className="relative h-[400px] w-full lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <AnimatedSection animation="fadeRight" className="lg:w-1/2">
+              <div className="relative h-[450px] w-full lg:h-[550px] rounded-3xl overflow-hidden shadow-large">
                 <Image
                   src="/images/photo1.jpg"
                   alt="Durga Aryal"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute -bottom-8 -right-8 w-56 h-56 gradient-gold rounded-full -z-10 opacity-40 blur-2xl" />
+                <div className="absolute -top-8 -left-8 w-56 h-56 gradient-rose rounded-full -z-10 opacity-40 blur-2xl" />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-gold/10 rounded-full -z-10"></div>
-              <div className="absolute -top-6 -left-6 w-48 h-48 bg-brand-pink/10 rounded-full -z-10"></div>
-            </div>
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">{dict.home.trainerHighlight.title}</h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            </AnimatedSection>
+
+            <AnimatedSection animation="fadeLeft" className="lg:w-1/2">
+              <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+                {dict.home.trainerHighlight.title}
+              </h2>
+              <p className="text-xl text-neutral-700 mb-10 leading-relaxed">
                 {dict.home.trainerHighlight.description}
               </p>
               <Link
                 href="/trainer"
-                className="bg-brand-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-600 transition-colors shadow-md"
+                className="inline-flex items-center gap-3 bg-gold-500 text-white px-10 py-4 rounded-full font-bold text-lg shadow-glow-gold hover:bg-gold-600 transition-all duration-300 hover:scale-105"
               >
-                Meet Our Trainer
+                <span>Meet Our Trainer</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
-      </section>
+      </ParallaxSection>
 
-      {/* CTA */}
-      <section className="py-20 bg-brand-pink-dark text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-8 max-w-3xl mx-auto">
-            {dict.home.cta.text}
-          </h2>
-          <Link
-            href="/contact"
-            className="bg-white text-brand-pink-dark px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
-          >
-            {dict.common.enquireNow}
-          </Link>
+      {/* CTA with Gradient */}
+      <section className="section-padding gradient-rose text-center relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-rose-300/30 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-300/30 rounded-full blur-3xl -z-10" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <AnimatedSection animation="scaleIn">
+            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-10 max-w-3xl mx-auto leading-tight">
+              {dict.home.cta.text}
+            </h2>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 bg-rose-600 text-white px-12 py-5 rounded-full font-bold text-xl shadow-large hover:bg-rose-700 hover:shadow-glow-rose transition-all duration-300 hover:scale-105"
+            >
+              <span>{dict.common.enquireNow}</span>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
     </div>

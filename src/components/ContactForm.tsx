@@ -40,17 +40,17 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
 
     if (submitted) {
         return (
-            <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white border-2 border-green-500 rounded-3xl p-12 text-center shadow-soft">
+                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
-                <p className="text-green-700">{formDict.success}</p>
+                <h3 className="text-3xl font-bold text-neutral-900 mb-3">Thank You!</h3>
+                <p className="text-neutral-700 text-lg mb-6">{formDict.success}</p>
                 <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-6 text-green-600 font-medium hover:text-green-800 underline"
+                    className="text-green-600 font-semibold hover:text-green-700 underline"
                 >
                     Send another message
                 </button>
@@ -59,13 +59,13 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
     }
 
     return (
-        <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{formDict.heading}</h2>
+        <form onSubmit={handleSubmit} className="bg-white shadow-soft rounded-3xl p-10">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-8">{formDict.heading}</h2>
 
             <div className="space-y-6">
                 <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        {formDict.fields.name} <span className="text-red-500">*</span>
+                    <label htmlFor="name" className="block text-sm font-semibold text-neutral-700 mb-2">
+                        {formDict.fields.name} <span className="text-rose-600">*</span>
                     </label>
                     <input
                         type="text"
@@ -74,13 +74,13 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-pink focus:border-transparent outline-none transition-shadow"
+                        className="w-full px-5 py-3 border-2 border-neutral-200 rounded-2xl focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all"
                     />
                 </div>
 
                 <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        {formDict.fields.phone} <span className="text-red-500">*</span>
+                    <label htmlFor="phone" className="block text-sm font-semibold text-neutral-700 mb-2">
+                        {formDict.fields.phone} <span className="text-rose-600">*</span>
                     </label>
                     <input
                         type="tel"
@@ -89,12 +89,12 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-pink focus:border-transparent outline-none transition-shadow"
+                        className="w-full px-5 py-3 border-2 border-neutral-200 rounded-2xl focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all"
                     />
                 </div>
 
                 <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="email" className="block text-sm font-semibold text-neutral-700 mb-2">
                         {formDict.fields.email}
                     </label>
                     <input
@@ -103,12 +103,12 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-pink focus:border-transparent outline-none transition-shadow"
+                        className="w-full px-5 py-3 border-2 border-neutral-200 rounded-2xl focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all"
                     />
                 </div>
 
                 <div>
-                    <label htmlFor="course" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="course" className="block text-sm font-semibold text-neutral-700 mb-2">
                         {formDict.fields.course}
                     </label>
                     <select
@@ -116,7 +116,7 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
                         name="course"
                         value={formData.course}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-pink focus:border-transparent outline-none transition-shadow bg-white"
+                        className="w-full px-5 py-3 border-2 border-neutral-200 rounded-2xl focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all bg-white"
                     >
                         <option value="">Select a course...</option>
                         {courseList.map((course) => (
@@ -128,22 +128,22 @@ export default function ContactForm({ formDict, courseList, initialCourse }: { f
                 </div>
 
                 <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="message" className="block text-sm font-semibold text-neutral-700 mb-2">
                         {formDict.fields.message}
                     </label>
                     <textarea
                         id="message"
                         name="message"
-                        rows={4}
+                        rows={5}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-pink focus:border-transparent outline-none transition-shadow resize-none"
+                        className="w-full px-5 py-3 border-2 border-neutral-200 rounded-2xl focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all resize-none"
                     ></textarea>
                 </div>
 
                 <button
                     type="submit"
-                    className="w-full bg-brand-pink-dark text-white font-bold py-3 rounded-lg hover:bg-pink-600 transition-colors shadow-md hover:shadow-lg"
+                    className="w-full bg-rose-600 text-white font-bold py-4 rounded-full hover:bg-rose-700 transition-all shadow-medium hover:shadow-glow-rose hover:scale-[1.02]"
                 >
                     {formDict.fields.submit}
                 </button>

@@ -8,34 +8,41 @@ export default function CourseCard({ course, featured = false }: { course: Cours
     const imageSrc = getCourseImage(course)
 
     return (
-        <div className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full group ${featured ? 'border-brand-pink-light' : ''}`}>
+        <div className={`bg-white rounded-2xl shadow-soft hover-lift overflow-hidden border ${featured ? 'border-rose-200' : 'border-neutral-100'} flex flex-col h-full group`}>
             {/* Course Image */}
-            <div className="relative w-full h-48 overflow-hidden">
+            <div className="relative w-full h-56 overflow-hidden">
                 <Image
                     src={imageSrc}
                     alt={course.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-            </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-            <div className="p-6 flex-grow">
-                <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.title}</h3>
-                    <span className="inline-block bg-brand-pink-light text-brand-pink-dark text-xs px-2 py-1 rounded-full font-semibold whitespace-nowrap ml-2">
+                {/* Duration Badge */}
+                <div className="absolute top-4 right-4">
+                    <span className="inline-block glass px-3 py-1.5 rounded-full text-sm font-semibold text-neutral-800 shadow-medium">
                         {course.duration}
                     </span>
                 </div>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+            </div>
+
+            <div className="p-6 flex-grow flex flex-col">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-3 line-clamp-2 group-hover:text-rose-600 transition-colors duration-300">
+                    {course.title}
+                </h3>
+                <p className="text-neutral-600 text-sm leading-relaxed mb-6 line-clamp-3 flex-grow">
                     {course.description || course.overview}
                 </p>
-            </div>
-            <div className="px-6 pb-6 mt-auto">
+
                 <Link
                     href={linkHref}
-                    className="inline-block w-full text-center bg-white border border-brand-pink text-brand-pink-dark hover:bg-brand-pink hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
+                    className="inline-flex items-center justify-center w-full bg-white border-2 border-rose-500 text-rose-600 hover:bg-rose-600 hover:text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 group-hover:shadow-glow-rose"
                 >
-                    View Details
+                    <span>View Details</span>
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                 </Link>
             </div>
         </div>
