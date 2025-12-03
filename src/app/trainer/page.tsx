@@ -60,6 +60,24 @@ export default async function TrainerPage() {
                         </div>
                     </div>
                 </div>
+
+                {/* Training Sessions */}
+                <div className="mt-20">
+                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Training Sessions with Durga</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {/* Dynamically load a few images for the trainer page */}
+                        {['hair-styling-02.jpg', 'makeup-faceart-02.jpg', 'makeup-sari-01.jpg', 'nailart-basic-01.jpg'].map((imgName, index) => (
+                            <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                                <Image
+                                    src={`/images/renamed/${imgName}`}
+                                    alt="Training session"
+                                    fill
+                                    className="object-cover hover:scale-110 transition-transform duration-500"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )

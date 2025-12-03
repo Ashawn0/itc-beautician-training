@@ -1,65 +1,82 @@
-# ITC Beautician Training Website
+# ITC Beautician Training Institute
 
-This is the official website for M/s I.T.C. Beautician Training And Service Center Pvt. Ltd.
-Built with Next.js, Tailwind CSS, and TypeScript.
+Welcome to the official repository for the ITC Beautician Training Institute website. This modern, responsive web application is built to showcase our comprehensive beauty courses, expert trainers, and student achievements.
 
-## Project Structure
+## 🚀 Project Overview
 
-- `src/app`: Page routes (Home, About, Courses, etc.)
-- `src/components`: Reusable UI components (Header, Footer, CourseCard, etc.)
-- `src/locales`: Localization files (English and Nepali content)
-- `public/images`: Website images
+This project is a Next.js application designed to provide a premium digital presence for the institute. It features:
+- **Dynamic Course Catalog**: Detailed information on makeup, hair styling, and nail art courses.
+- **Interactive Gallery**: A showcase of student work and training sessions.
+- **Trainer Profiles**: Highlighting the expertise of our lead trainers.
+- **Responsive Design**: Optimized for all devices, ensuring a seamless user experience.
+- **Localization Ready**: Structured to support multiple languages (English/Nepali).
 
-## How to Manage Content
+## 🛠️ Tech Stack
 
-### 1. Adding Nepali Translation
-The website is set up for bilingual support. Currently, only English is active.
-To add Nepali:
-1. Open `src/locales/np.json`.
-2. Copy the content from `src/locales/en.json` into `np.json`.
-3. Translate the values (right side) to Nepali. Keep the keys (left side) exactly the same.
-4. Update `src/components/Header.tsx` to add a language switcher (or ask a developer to enable the toggle).
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Heroicons](https://heroicons.com/)
+- **Linting**: ESLint
 
-### 2. Updating Courses
-All course information is stored in `src/locales/en.json`.
-To add or edit a course:
-1. Open `src/locales/en.json`.
-2. Find the `"courses"` array.
-3. Edit the details of an existing course or add a new object with the same structure:
-   ```json
-   {
-     "id": "new-course-slug",
-     "title": "New Course Name",
-     "duration": "1 Month",
-     "overview": "Description...",
-     "skillsLearned": ["Skill 1", "Skill 2"],
-     "whoShouldJoin": "Target audience...",
-     "certification": "Certificate info..."
-   }
-   ```
+## 📂 Project Structure
 
-### 3. Changing Images
-1. Place new images in `public/images`.
-2. Open the relevant page or component (e.g., `src/app/page.tsx` for Home) and update the `src` path in the `<Image />` component.
-
-## Deployment
-
-### Vercel (Recommended)
-1. Push this code to a GitHub repository.
-2. Go to [Vercel](https://vercel.com) and import the project.
-3. Vercel will automatically detect Next.js and deploy it.
-
-### Netlify
-1. Drag and drop the `.next` folder (after building) or connect to GitHub.
-2. Build command: `npm run build`
-3. Publish directory: `.next` (or let Netlify auto-detect Next.js).
-
-## Development
-
-Run the development server:
-
-```bash
-npm run dev
+```
+src/
+├── app/              # App Router pages and layouts
+├── components/       # Reusable UI components
+├── data/             # Static data assets (asset map, etc.)
+├── hooks/            # Custom React hooks
+├── lib/              # Utility libraries (i18n, etc.)
+├── locales/          # Localization files
+├── types/            # Shared TypeScript definitions
+└── utils/            # Helper functions
+public/
+├── images/           # Optimized image assets
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Getting Started
+
+Follow these steps to set up the project locally:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd beauticiantraining
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open your browser:**
+    Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 📦 Build & Deployment
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To start the production server:
+
+```bash
+npm start
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please ensure you follow the project's coding standards and submit a pull request for review.
+
+---
+
+© 2025 ITC Beautician Training Institute. All rights reserved.

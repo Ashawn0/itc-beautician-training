@@ -1,4 +1,5 @@
 import { getDictionary } from '@/lib/i18n'
+import Image from 'next/image'
 
 export default async function AboutPage() {
     const dict = await getDictionary('en')
@@ -59,6 +60,24 @@ export default async function AboutPage() {
                                     </svg>
                                 </div>
                                 <span className="text-gray-800 font-medium">{point}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Classroom Moments */}
+                <div className="mt-20">
+                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Classroom Moments</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {/* Dynamically load a few images for the about page */}
+                        {['hair-styling-01.jpg', 'makeup-general-01.jpg', 'makeup-faceart-01.jpg', 'nailart-basic-01.jpg'].map((imgName, index) => (
+                            <div key={index} className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                                <Image
+                                    src={`/images/renamed/${imgName}`}
+                                    alt="Classroom training"
+                                    fill
+                                    className="object-cover hover:scale-110 transition-transform duration-500"
+                                />
                             </div>
                         ))}
                     </div>

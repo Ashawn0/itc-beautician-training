@@ -1,26 +1,24 @@
 import Link from 'next/link'
-
-type Course = {
-    id?: string
-    title: string
-    duration: string
-    description?: string
-    overview?: string
-}
+import Image from 'next/image'
+import { Course } from '@/types'
+import { getCourseImage } from '@/utils/imageUtils'
 
 export default function CourseCard({ course, featured = false }: { course: Course; featured?: boolean }) {
-    // If it's a featured course from home page, it might not have an ID in the JSON structure I defined for featuredCourses
-    // But I should probably link it to the main course page or a specific slug.
-    // In my JSON, featuredCourses items don't have IDs, but they match titles of full courses.
-    // For MVP, I'll link to /courses if no ID, or /courses/[id] if ID exists.
-
-    // Actually, I should probably map featured courses to their IDs or just use the title to find the ID.
-    // For now, let's assume we pass an ID or just link to /courses.
-
     const linkHref = course.id ? `/courses/${course.id}` : '/courses'
+    const imageSrc = getCourseImage(course)
 
     return (
-        <div className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full ${featured ? 'border-brand-pink-light' : ''}`}>
+        <div className={`bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full group ${featured ? 'border-brand-pink-light' : ''}`}>
+            {/* Course Image */}
+            <div className="relative w-full h-48 overflow-hidden">
+                <Image
+                    src={imageSrc}
+                    alt={course.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+            </div>
+
             <div className="p-6 flex-grow">
                 <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-bold text-gray-900 line-clamp-2">{course.title}</h3>
