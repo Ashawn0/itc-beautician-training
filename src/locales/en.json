@@ -1,0 +1,421 @@
+{
+  "common": {
+    "brandName": "M/s I.T.C. Beautician Training And Service Center Pvt. Ltd.",
+    "brandShortName": "ITC Beautician Training",
+    "viewCourses": "View Courses",
+    "contactUs": "Contact Us",
+    "enquireNow": "Enquire Now",
+    "readMore": "Read More"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "courses": "Courses",
+    "trainer": "Trainer",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "heading": "ITC Beautician Training & Service Center",
+      "subheading": "Professional beautician training designed to turn passion into real career skills.",
+      "description": "ITC Beautician Training & Service Center is a government-registered beauty academy in Nepal offering structured, hands-on training in hair, makeup, skin, nails, and salon services. Our programs focus on practical learning, modern beauty techniques, and building confidence through real practice."
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us",
+      "points": [
+        {
+          "title": "Experienced Trainer",
+          "description": "Learn directly from a skilled beautician with years of hands-on experience, updated knowledge, and a student-friendly teaching approach."
+        },
+        {
+          "title": "Practical Training",
+          "description": "All courses focus on real practice: tools, techniques, models, and step-by-step guidance to ensure students master every skill."
+        },
+        {
+          "title": "Career-Focused Programs",
+          "description": "Our courses prepare students for salon jobs, freelance work, bridal makeup, professional hair services, and independent business opportunities."
+        }
+      ]
+    },
+    "featuredCourses": {
+      "title": "Featured Courses",
+      "courses": [
+        {
+          "title": "Basic Beautician Training",
+          "duration": "4 Months",
+          "description": "A complete beginner-friendly course covering makeup, hair basics, facials, and beauty fundamentals."
+        },
+        {
+          "title": "Professional Makeup Training",
+          "duration": "1 Month",
+          "description": "Learn bridal, party, HD, and photoshoot makeup techniques with professional tools and methods."
+        },
+        {
+          "title": "Basic Nail Art Training",
+          "duration": "1 Month",
+          "description": "Start your nail career with essential designs, gel polish techniques, and simple extensions."
+        },
+        {
+          "title": "Hair Chemical Training",
+          "duration": "15 Days",
+          "description": "Master the basics of hair color, straightening, smoothing, and chemical applications."
+        }
+      ]
+    },
+    "trainerHighlight": {
+      "title": "Meet Our Trainer – Durga Aryal",
+      "description": "An experienced beautician specializing in makeup, hair, skin treatment, and nail artistry. She has helped many students build professional skills and enter the beauty industry with confidence."
+    },
+    "cta": {
+      "text": "Start your journey today. Contact us to learn which course fits your goals."
+    }
+  },
+  "about": {
+    "heading": "About ITC Beautician Training & Service Center",
+    "introduction": "ITC Beautician Training & Service Center is a registered beauty academy in Nepal dedicated to providing professional, practical, and career-oriented beautician education. Our goal is to make quality beauty training accessible and help students develop the confidence and skills needed to build successful careers in the beauty industry.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To offer high-quality beautician training that blends modern techniques with practical learning, enabling students to become confident professionals ready for salon work or independent practice."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become a leading beauty academy in Nepal known for producing skilled beauticians, makeup artists, hair stylists, and beauty professionals."
+    },
+    "teachingApproach": {
+      "title": "Our Teaching Approach",
+      "points": [
+        "Hands-on practice with real tools",
+        "Step-by-step demonstrations",
+        "Small class sizes",
+        "Friendly environment",
+        "Focus on confidence and creativity"
+      ]
+    },
+    "whyStudentsChooseUs": {
+      "title": "Why Students Choose Us",
+      "points": [
+        "Practical, job-ready training",
+        "Updated beauty techniques",
+        "Affordable and accessible",
+        "Recognized certification",
+        "Personal guidance"
+      ]
+    }
+  },
+  "trainer": {
+    "name": "Durga Aryal",
+    "title": "Senior Beautician Trainer",
+    "subtitle": "Beauty, Makeup, Hair & Nail Specialist",
+    "bio": [
+      "Durga Aryal is a skilled beautician and trainer with extensive experience in makeup, hair styling, skin care, nail artistry, and salon services. Over the years, she has trained many students and helped them become confident beauticians.",
+      "She focuses on practical learning, proper technique, and helping students build the skills necessary for real-world beauty work."
+    ],
+    "expertise": {
+      "title": "Areas of Expertise",
+      "items": [
+        "Makeup (bridal, party, HD)",
+        "Hair cutting & styling",
+        "Hair color & chemical work",
+        "Skin care & facials",
+        "Nail art & extensions",
+        "Threading & beauty services"
+      ]
+    },
+    "philosophy": {
+      "title": "Teaching Philosophy",
+      "quote": "“Beauty skills grow through practice. I teach every student step-by-step, ensuring they understand each technique and can perform it confidently.”"
+    }
+  },
+  "coursesPage": {
+    "heading": "Our Courses",
+    "intro": "Explore our wide range of beautician courses designed for beginners, aspiring professionals, and those looking to upgrade their skills. Each course includes practical training, step-by-step instruction, and a professional certificate upon completion."
+  },
+  "courses": [
+    {
+      "id": "basic-beautician-training",
+      "title": "Basic Beautician Training",
+      "duration": "4 Months",
+      "overview": "A foundation course for beginners covering essential beauty techniques including skin care, basic hair styling, simple makeup, and salon services.",
+      "skillsLearned": [
+        "Skin cleansing & facials",
+        "Basic makeup",
+        "Basic hair cutting",
+        "Simple hairstyles",
+        "Threading & waxing fundamentals"
+      ],
+      "whoShouldJoin": "Beginners and students wanting a strong beautician foundation.",
+      "certification": "ITC Beautician Training Certificate on completion."
+    },
+    {
+      "id": "diploma-in-beautician-training",
+      "title": "Diploma in Beautician Training",
+      "duration": "6 Months",
+      "overview": "A complete beautician program covering makeup, hair, skin, and nail skills in detail. Perfect for those aiming for a professional career.",
+      "skillsLearned": [
+        "Party & bridal makeup",
+        "Hair cutting & styling",
+        "Hair color basics",
+        "Advanced facials",
+        "Nail care introduction"
+      ],
+      "whoShouldJoin": "Students wanting full beautician training."
+    },
+    {
+      "id": "advance-diploma-in-beautician-training",
+      "title": "Advance Diploma in Beautician Training",
+      "duration": "6 Months",
+      "overview": "An advanced beautician course with deep training in hair chemical work, makeup, skin treatments, and professional salon techniques.",
+      "skillsLearned": [
+        "HD & bridal makeup",
+        "Hair straightening, smoothing, coloring",
+        "Advanced facials & treatments",
+        "Nail art basics",
+        "Salon client handling"
+      ]
+    },
+    {
+      "id": "full-course-beautician-training",
+      "title": "Full Course Beautician Training",
+      "duration": "6 Months",
+      "overview": "A complete package covering makeup, hair, nails, skin, and chemical services—ideal for starting your own salon or working professionally.",
+      "skillsLearned": [
+        "Full makeup range",
+        "Hair cuts & styling",
+        "Skin & facial treatments",
+        "Nail services",
+        "Chemical treatments"
+      ]
+    },
+    {
+      "id": "beautician-teacher-training",
+      "title": "Beautician Teacher Training",
+      "duration": "3 Months",
+      "overview": "A specialized course for beauticians who want to become trainers.",
+      "skillsLearned": [
+        "Teaching methods",
+        "Demonstration skills",
+        "Curriculum planning",
+        "Professional communication"
+      ]
+    },
+    {
+      "id": "basic-nail-art-training",
+      "title": "Basic Nail Art Training",
+      "duration": "1 Month",
+      "overview": "Learn the basics of nail art and nail beauty services.",
+      "skillsLearned": [
+        "Gel polish",
+        "Simple nail designs",
+        "Nail care essentials"
+      ]
+    },
+    {
+      "id": "master-nail-technician",
+      "title": "Master Nail / Nail Art Technician",
+      "duration": "3 Months",
+      "overview": "Become a professional nail technician with advanced training.",
+      "skillsLearned": [
+        "Nail extensions",
+        "3D nail art",
+        "Gel & acrylic systems",
+        "Advanced designs"
+      ]
+    },
+    {
+      "id": "basic-makeup-training",
+      "title": "Basic Makeup Training",
+      "duration": "7 Days",
+      "overview": "Short course covering essential makeup techniques.",
+      "skillsLearned": [
+        "Product understanding",
+        "Day & evening looks",
+        "Skin prep basics"
+      ]
+    },
+    {
+      "id": "self-makeup-training",
+      "title": "Self-Makeup Training",
+      "duration": "7 / 15 Days",
+      "overview": "Learn how to do your own makeup with confidence.",
+      "skillsLearned": [
+        "Everyday looks",
+        "Party looks",
+        "Skin prep"
+      ]
+    },
+    {
+      "id": "professional-makeup-training",
+      "title": "Professional Makeup Training",
+      "duration": "1 Month",
+      "overview": "Professional-level makeup skills for bridal, party, and HD looks.",
+      "skillsLearned": [
+        "Foundation & base work",
+        "HD makeup",
+        "Bridal styling",
+        "Contouring & highlight"
+      ]
+    },
+    {
+      "id": "mehandi-training",
+      "title": "Mehandi Training",
+      "duration": "1 Month",
+      "overview": "Learn traditional and modern mehandi techniques.",
+      "skillsLearned": [
+        "Bridal designs",
+        "Arabic & Indo styles",
+        "Cone preparation"
+      ]
+    },
+    {
+      "id": "short-special-abroad-training",
+      "title": "Short Special (Abroad Training)",
+      "duration": "1 Month",
+      "overview": "Short professional course for students preparing to work abroad.",
+      "skillsLearned": [
+        "Basic beauty services",
+        "Salon etiquette",
+        "Practical skill upgrade"
+      ]
+    },
+    {
+      "id": "hydra-facial-training",
+      "title": "Hydra Facial Training",
+      "duration": "15 Days",
+      "overview": "Training in hydra facial techniques and machine use.",
+      "skillsLearned": [
+        "Deep cleansing",
+        "Hydration method",
+        "Machine operation"
+      ]
+    },
+    {
+      "id": "microblading-training",
+      "title": "Microblading Training",
+      "duration": "1 Month",
+      "overview": "Step-by-step training in semi-permanent eyebrow microblading.",
+      "skillsLearned": [
+        "Brow mapping",
+        "Pigment use",
+        "Stroke techniques"
+      ]
+    },
+    {
+      "id": "hair-chemical-training",
+      "title": "Hair Chemical Training",
+      "duration": "15 Days",
+      "overview": "Focused training in hair color and chemical treatments.",
+      "skillsLearned": [
+        "Color application",
+        "Straightening/smoothing",
+        "Safety & aftercare"
+      ]
+    },
+    {
+      "id": "russian-juro-training",
+      "title": "Russian Juro (Bun) Training",
+      "duration": "1 Month",
+      "overview": "Learn Russian-style bridal and party buns.",
+      "skillsLearned": [
+        "Volume buns",
+        "Texture work",
+        "Advanced styling"
+      ]
+    },
+    {
+      "id": "threading-special",
+      "title": "Threading Special",
+      "duration": "15 Days",
+      "overview": "Short course focused on threading techniques.",
+      "skillsLearned": [
+        "Eyebrow shaping",
+        "Upper lip & face threading"
+      ]
+    },
+    {
+      "id": "facial-special",
+      "title": "Facial Special",
+      "duration": "1 Month",
+      "overview": "Training in classic and advanced facial techniques.",
+      "skillsLearned": [
+        "Massage",
+        "Exfoliation",
+        "Mask application"
+      ]
+    },
+    {
+      "id": "hair-cutting-special",
+      "title": "Hair Cutting Special",
+      "duration": "1 Month",
+      "overview": "Learn salon-style hair cutting techniques.",
+      "skillsLearned": [
+        "Layer cuts",
+        "Bob cuts",
+        "Children’s haircuts"
+      ]
+    },
+    {
+      "id": "manicure-pedicure-special",
+      "title": "Manicure/Pedicure Special",
+      "duration": "15 Days",
+      "overview": "Training in essential hand and foot beauty care.",
+      "skillsLearned": [
+        "Soaking",
+        "Cleaning",
+        "Scrubbing",
+        "Nail shaping"
+      ]
+    },
+    {
+      "id": "latest-hairstyle-training",
+      "title": "Latest Hairstyle Training",
+      "duration": "1 Month",
+      "overview": "Training in trending hairstyles for events and parties.",
+      "skillsLearned": [
+        "Waves",
+        "Curls",
+        "Braids",
+        "Modern styling"
+      ]
+    },
+    {
+      "id": "eyelashes-special",
+      "title": "Eyelashes Special",
+      "duration": "15 Days",
+      "overview": "Training in lash extensions and lash lifting.",
+      "skillsLearned": [
+        "Classic extensions",
+        "Volume lashes",
+        "Lash mapping"
+      ]
+    }
+  ],
+  "gallery": {
+    "heading": "Our Gallery",
+    "intro": "Explore photos from our training sessions, student practice, classroom activities, makeup looks, hairstyles, nail art, and certification events."
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "intro": "Have questions or want to join a course? We are here to assist you. Contact us using the details below or fill out the enquiry form.",
+    "details": {
+      "phone": "98XXXXXXXX",
+      "whatsapp": "98XXXXXXXX",
+      "email": "itcbeauty@email.com",
+      "address": "(Owner will fill)",
+      "hours": "Sunday–Friday, 7 AM – 6 PM"
+    },
+    "form": {
+      "heading": "Enquiry Form",
+      "intro": "Complete the form below and our team will contact you shortly.",
+      "fields": {
+        "name": "Full Name",
+        "phone": "Phone Number",
+        "email": "Email (optional)",
+        "course": "Select Course",
+        "message": "Message",
+        "submit": "Submit Enquiry"
+      },
+      "success": "Thank you! We will contact you soon."
+    }
+  }
+}
