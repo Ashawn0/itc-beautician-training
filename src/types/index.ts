@@ -1,9 +1,14 @@
 export type Course = {
-    id?: string
+    id: string
     title: string
     duration: string
-    description?: string
-    overview?: string
+    description: string
+    image: string
+    whatYouWillLearn: string[]
+    whyThisCourse: string
+    careerScope: string
+    curriculum: string[]
+    certification?: string
 }
 
 export type Trainer = {

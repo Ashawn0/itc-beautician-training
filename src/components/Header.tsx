@@ -51,7 +51,7 @@ export default function Header({ nav }: { nav: NavDict }) {
                             {/* Logo */}
                             <Link href="/" className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
                                 <Image
-                                    src="/images/logo.png"
+                                    src="/logos/clean2_LogoFull.png"
                                     alt="ITC Beautician Training"
                                     width={isScrolled ? 120 : 140}
                                     height={isScrolled ? 40 : 45}
@@ -66,8 +66,8 @@ export default function Header({ nav }: { nav: NavDict }) {
                                         key={item.href}
                                         href={item.href}
                                         className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${pathname === item.href
-                                                ? 'text-rose-600 bg-rose-50'
-                                                : 'text-neutral-700 hover:text-rose-600 hover:bg-rose-50/50'
+                                            ? 'text-rose-600 bg-rose-50'
+                                            : 'text-neutral-700 hover:text-rose-600 hover:bg-rose-50/50'
                                             }`}
                                     >
                                         {item.name}
@@ -146,11 +146,11 @@ export default function Header({ nav }: { nav: NavDict }) {
                     {/* Logo */}
                     <div className="p-8 border-b border-white/10">
                         <Image
-                            src="/images/logo.png"
+                            src="/logos/clean2_LogoVertical.png"
                             alt="ITC Beautician Training"
-                            width={140}
-                            height={45}
-                            className="h-auto"
+                            width={160}
+                            height={160}
+                            className="h-auto mx-auto"
                         />
                     </div>
 
@@ -162,8 +162,8 @@ export default function Header({ nav }: { nav: NavDict }) {
                                 href={item.href}
                                 onClick={() => setIsOpen(false)}
                                 className={`block px-4 py-3 rounded-xl font-medium transition-all duration-300 ${pathname === item.href
-                                        ? 'text-white bg-rose-600'
-                                        : 'text-white/90 hover:text-white hover:bg-white/10'
+                                    ? 'text-white bg-rose-600'
+                                    : 'text-white/90 hover:text-white hover:bg-white/10'
                                     }`}
                             >
                                 {item.name}

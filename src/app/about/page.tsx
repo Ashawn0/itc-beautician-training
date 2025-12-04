@@ -2,6 +2,7 @@ import { getDictionary } from '@/lib/i18n'
 import Image from 'next/image'
 import ParallaxSection from '@/components/ParallaxSection'
 import AnimatedSection from '@/components/AnimatedSection'
+import TextOverlay from '@/components/TextOverlay'
 import { getBackgroundImage } from '@/utils/backgroundImages'
 
 export default async function AboutPage() {
@@ -12,16 +13,18 @@ export default async function AboutPage() {
             {/* Header with Parallax */}
             <ParallaxSection
                 imageSrc={getBackgroundImage('about')}
-                overlayOpacity={0.75}
-                overlayColor="light"
+                overlayOpacity={0.5}
+                overlayColor="dark"
                 minHeight="400px"
                 className="flex items-center justify-center"
             >
                 <div className="container mx-auto px-4 text-center">
                     <AnimatedSection animation="fadeUp">
-                        <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900">
-                            {dict.about.heading}
-                        </h1>
+                        <TextOverlay variant="none" textColor="light">
+                            <h1 className="text-5xl lg:text-6xl font-bold">
+                                {dict.about.heading}
+                            </h1>
+                        </TextOverlay>
                     </AnimatedSection>
                 </div>
             </ParallaxSection>
@@ -119,11 +122,16 @@ export default async function AboutPage() {
                     </AnimatedSection>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        {['hair-styling-01.jpg', 'makeup-general-01.jpg', 'makeup-faceart-01.jpg', 'nailart-basic-01.jpg'].map((imgName, index) => (
+                        {[
+                            '/images/uploads/FaceArt_MakeUp (6).jpg',
+                            '/images/uploads/Sarri_DressUp_Styling (6).jpg',
+                            '/images/uploads/FaceArt_MakeUp (4).jpg',
+                            '/images/uploads/GroupPhotoWithPastStudent (6).jpg'
+                        ].map((imgSrc, index) => (
                             <AnimatedSection key={index} animation="scaleIn" delay={index * 100}>
                                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-medium hover-lift">
                                     <Image
-                                        src={`/images/renamed/${imgName}`}
+                                        src={imgSrc}
                                         alt="Classroom training"
                                         fill
                                         className="object-cover"

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 type CommonDict = {
     brandName: string
@@ -35,9 +36,15 @@ export default function Footer({
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Brand Info */}
                     <div>
-                        <h3 className="text-xl font-bold text-brand-gold mb-4">
-                            {common.brandShortName}
-                        </h3>
+                        <div className="mb-4">
+                            <Image
+                                src="/logos/clean2_LogoFull.png"
+                                alt={common.brandName}
+                                width={200}
+                                height={80}
+                                className="h-auto brightness-0 invert opacity-80"
+                            />
+                        </div>
                         <p className="text-gray-400 text-sm">
                             {common.brandName}
                         </p>
@@ -86,6 +93,10 @@ export default function Footer({
 
                 <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
                     &copy; {new Date().getFullYear()} {common.brandName}. All rights reserved.
+                    <br />
+                    <span className="text-gray-600 text-xs mt-2 inline-block">
+                        Powered by <Link href="https://github.com/Ashawn0" target="_blank" className="hover:text-rose-500 transition-colors">Ashawn</Link>
+                    </span>
                 </div>
             </div>
         </footer>

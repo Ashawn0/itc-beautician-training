@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getDictionary } from '@/lib/i18n'
+import { courses } from '@/data/courses'
 import CourseCard from '@/components/CourseCard'
 import ParallaxSection from '@/components/ParallaxSection'
 import AnimatedSection from '@/components/AnimatedSection'
+import TextOverlay from '@/components/TextOverlay'
 import { getBackgroundImage } from '@/utils/backgroundImages'
+import { oldImages } from '@/utils/imageAssets'
 
 export default async function Home() {
   const dict = await getDictionary('en')
@@ -13,21 +16,23 @@ export default async function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section with Parallax */}
       <ParallaxSection
-        imageSrc={getBackgroundImage('hero')}
-        overlayOpacity={0.4}
+        imageSrc={oldImages.hero.main}
+        overlayOpacity={0.3}
         overlayColor="dark"
         minHeight="100vh"
         className="flex items-center justify-center"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <AnimatedSection animation="fadeLeft" className="text-center lg:text-left text-white">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg">
-                {dict.home.hero.heading}
-              </h1>
-              <p className="text-xl lg:text-2xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-white/95 drop-shadow-md">
-                {dict.home.hero.subheading}
-              </p>
+            <AnimatedSection animation="fadeLeft" className="text-center lg:text-left">
+              <TextOverlay variant="none" textColor="light">
+                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 leading-tight">
+                  {dict.home.hero.heading}
+                </h1>
+                <p className="text-xl lg:text-2xl mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                  {dict.home.hero.subheading}
+                </p>
+              </TextOverlay>
               <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                 <Link
                   href="/courses"
@@ -47,7 +52,7 @@ export default async function Home() {
             <AnimatedSection animation="fadeRight" delay={200} className="hidden lg:block">
               <div className="relative h-[500px] xl:h-[600px] rounded-3xl overflow-hidden shadow-large transform transition-transform duration-500 hover:scale-105">
                 <Image
-                  src="/images/profandstudentmain.jpg"
+                  src={oldImages.hero.students}
                   alt="ITC Beautician Training"
                   fill
                   className="object-cover"
@@ -57,6 +62,16 @@ export default async function Home() {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+
+        {/* Background Logo Overlay */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none animate-pulse-slow">
+          <Image
+            src="/logos/clean2_LogoModernGradient.png"
+            alt="Background Logo"
+            fill
+            className="object-contain"
+          />
         </div>
       </ParallaxSection>
 
@@ -101,9 +116,9 @@ export default async function Home() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {dict.home.featuredCourses.courses.map((course, index) => (
+            {courses.slice(0, 4).map((course, index) => (
               <AnimatedSection
-                key={index}
+                key={course.id}
                 animation="fadeUp"
                 delay={index * 100}
               >
@@ -139,7 +154,7 @@ export default async function Home() {
             <AnimatedSection animation="fadeRight" className="lg:w-1/2">
               <div className="relative h-[450px] w-full lg:h-[550px] rounded-3xl overflow-hidden shadow-large">
                 <Image
-                  src="/images/photo1.jpg"
+                  src="/images/uploads/PHOTO-2025-12-03-19-48-52.jpg"
                   alt="Durga Aryal"
                   fill
                   className="object-cover"
@@ -150,21 +165,27 @@ export default async function Home() {
             </AnimatedSection>
 
             <AnimatedSection animation="fadeLeft" className="lg:w-1/2">
-              <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-                {dict.home.trainerHighlight.title}
-              </h2>
-              <p className="text-xl text-neutral-700 mb-10 leading-relaxed">
-                {dict.home.trainerHighlight.description}
-              </p>
-              <Link
-                href="/trainer"
-                className="inline-flex items-center gap-3 bg-gold-500 text-white px-10 py-4 rounded-full font-bold text-lg shadow-glow-gold hover:bg-gold-600 transition-all duration-300 hover:scale-105"
+              <TextOverlay
+                variant="none"
+                textColor="dark"
+                className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg"
               >
-                <span>Meet Our Trainer</span>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+                <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                  {dict.home.trainerHighlight.title}
+                </h2>
+                <p className="text-xl mb-10 leading-relaxed">
+                  {dict.home.trainerHighlight.description}
+                </p>
+                <Link
+                  href="/trainer"
+                  className="inline-flex items-center gap-3 bg-gold-500 text-white px-10 py-4 rounded-full font-bold text-lg shadow-glow-gold hover:bg-gold-600 transition-all duration-300 hover:scale-105"
+                >
+                  <span>Meet Our Trainer</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </TextOverlay>
             </AnimatedSection>
           </div>
         </div>

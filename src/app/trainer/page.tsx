@@ -2,6 +2,7 @@ import { getDictionary } from '@/lib/i18n'
 import Image from 'next/image'
 import ParallaxSection from '@/components/ParallaxSection'
 import AnimatedSection from '@/components/AnimatedSection'
+import TextOverlay from '@/components/TextOverlay'
 import { getBackgroundImage } from '@/utils/backgroundImages'
 
 export default async function TrainerPage() {
@@ -13,17 +14,19 @@ export default async function TrainerPage() {
             {/* Header with Parallax */}
             <ParallaxSection
                 imageSrc={getBackgroundImage('trainer')}
-                overlayOpacity={0.75}
-                overlayColor="light"
+                overlayOpacity={0.5}
+                overlayColor="dark"
                 minHeight="450px"
                 className="flex items-center justify-center"
             >
                 <div className="container mx-auto px-4 text-center">
                     <AnimatedSection animation="fadeUp">
-                        <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-4">
-                            {trainer.title}
-                        </h1>
-                        <p className="text-3xl text-gold-600 font-semibold">{trainer.name}</p>
+                        <TextOverlay variant="none" textColor="light">
+                            <h1 className="text-5xl lg:text-6xl font-bold mb-4">
+                                {trainer.title}
+                            </h1>
+                            <p className="text-3xl text-gold-400 font-semibold">{trainer.name}</p>
+                        </TextOverlay>
                     </AnimatedSection>
                 </div>
             </ParallaxSection>
@@ -36,7 +39,7 @@ export default async function TrainerPage() {
                             <div className="relative">
                                 <div className="aspect-[3/4] relative rounded-3xl overflow-hidden shadow-large">
                                     <Image
-                                        src="/images/photo1.jpg"
+                                        src="/images/uploads/PHOTO-2025-12-03-19-48-52.jpg"
                                         alt={trainer.name}
                                         fill
                                         className="object-cover"
@@ -91,11 +94,16 @@ export default async function TrainerPage() {
                         </AnimatedSection>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                            {['hair-styling-02.jpg', 'makeup-faceart-02.jpg', 'makeup-sari-01.jpg', 'nailart-basic-01.jpg'].map((imgName, index) => (
+                            {[
+                                '/images/uploads/GroupPhotoWithPastStudent (1).jpg',
+                                '/images/uploads/GroupPhotoWithPastStudent (2).jpg',
+                                '/images/uploads/GroupPhotoWithPastStudent (3).jpg',
+                                '/images/uploads/GroupPhotoWithPastStudent (4).jpg'
+                            ].map((imgSrc, index) => (
                                 <AnimatedSection key={index} animation="scaleIn" delay={index * 100}>
                                     <div className="relative aspect-square rounded-2xl overflow-hidden shadow-medium hover-lift">
                                         <Image
-                                            src={`/images/renamed/${imgName}`}
+                                            src={imgSrc}
                                             alt="Training session"
                                             fill
                                             className="object-cover"

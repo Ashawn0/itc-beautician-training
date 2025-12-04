@@ -4,10 +4,12 @@ import ParallaxSection from '@/components/ParallaxSection'
 import AnimatedSection from '@/components/AnimatedSection'
 import { getBackgroundImage } from '@/utils/backgroundImages'
 
+import { courses } from '@/data/courses'
+
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ course?: string }> }) {
     const dict = await getDictionary('en')
     const { course } = await searchParams
-    const courseList = dict.courses.map(c => c.title)
+    const courseList = courses.map(c => c.title)
 
     return (
         <div className="min-h-screen">

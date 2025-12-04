@@ -20,6 +20,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "ITC Beautician Training & Service Center",
   description: "Professional beautician training in Nepal. Hair, makeup, skin, nail art courses.",
+  icons: {
+    icon: '/logos/clean2_LogoMain.png',
+    apple: '/logos/clean2_LogoMain.png',
+  },
 };
 
 export default async function RootLayout({
