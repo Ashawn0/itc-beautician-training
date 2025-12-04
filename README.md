@@ -86,13 +86,19 @@ To start the production server:
 npm start
 ```
 
-## 🤝 Contributing
+## 🔒 License & Security
 
-We welcome contributions! Please ensure you follow the project's coding standards:
--   Use TypeScript for all new files.
--   Follow the existing component structure.
--   Ensure responsive design for all UI changes.
+**ALL RIGHTS RESERVED**
+
+This project is a **PRIVATE COMMERCIAL PROPERTY** of **ITC Beautician Training & Service Center Pvt. Ltd.**
+
+-   **No Open Source**: This is NOT an open-source project.
+-   **No Redistribution**: You may not copy, modify, distribute, or sell any part of this codebase.
+-   **Confidentiality**: All code, designs, and assets are confidential trade secrets.
+
+For full terms, please refer to the `LICENSE` file in the root directory.
 
 ---
 
-© 2025 ITC Beautician Training Institute. Powered by [Ashawn](https://github.com/Ashawn0).
+© 2025 ITC Beautician Training & Service Center Pvt. Ltd. All Rights Reserved.
+Unauthorized use or reproduction is strictly prohibited.
