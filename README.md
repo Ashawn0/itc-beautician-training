@@ -4,35 +4,48 @@ Welcome to the official repository for the ITC Beautician Training Institute web
 
 ## 🚀 Project Overview
 
-This project is a Next.js application designed to provide a premium digital presence for the institute. It features:
-- **Dynamic Course Catalog**: Detailed information on makeup, hair styling, and nail art courses.
-- **Interactive Gallery**: A showcase of student work and training sessions.
-- **Trainer Profiles**: Highlighting the expertise of our lead trainers.
-- **Responsive Design**: Optimized for all devices, ensuring a seamless user experience.
-- **Localization Ready**: Structured to support multiple languages (English/Nepali).
+This project is a high-performance **Next.js 15** application designed to provide a premium digital presence for the institute. It leverages the latest web technologies to ensure speed, SEO optimization, and a seamless user experience across all devices.
+
+### Key Features
+-   **Dynamic Course Catalog**: Data-driven course pages with detailed curriculums and career scopes.
+-   **Premium UI/UX**: Custom design system using Tailwind CSS v4 with glassmorphism and parallax effects.
+-   **Interactive Components**: Animated sections, scroll-triggered reveals, and responsive mobile navigation.
+-   **Localization Ready**: Architecture prepared for multi-language support (English/Nepali) via dictionary pattern.
+-   **SEO Optimized**: Semantic HTML, metadata management, and fast core web vitals.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Icons**: [Heroicons](https://heroicons.com/)
-- **Linting**: ESLint
+-   **Framework**: [Next.js 15](https://nextjs.org/) (App Router & Server Components)
+-   **Language**: [TypeScript](https://www.typescriptlang.org/) (Strict mode)
+-   **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+-   **Fonts**: [Google Fonts](https://fonts.google.com/) (Playfair Display & Inter)
+-   **Icons**: Custom SVG & Heroicons
+-   **Linting**: ESLint
 
 ## 📂 Project Structure
 
+The project follows a modular, scalable structure:
+
 ```
 src/
-├── app/              # App Router pages and layouts
-├── components/       # Reusable UI components
-├── data/             # Static data assets (asset map, etc.)
-├── hooks/            # Custom React hooks
-├── lib/              # Utility libraries (i18n, etc.)
-├── locales/          # Localization files
-├── types/            # Shared TypeScript definitions
-└── utils/            # Helper functions
+├── app/              # Next.js App Router (Pages, Layouts, API routes)
+│   ├── contact/      # Contact page
+│   ├── courses/      # Course listing & dynamic [id] pages
+│   ├── gallery/      # Gallery page
+│   ├── trainer/      # Trainer profile page
+│   ├── globals.css   # Global styles & Tailwind directives
+│   ├── layout.tsx    # Root layout with SEO metadata
+│   └── page.tsx      # Homepage
+├── components/       # Reusable UI components (Header, Footer, Cards, etc.)
+├── data/             # Static data sources (Courses, Testimonials)
+├── hooks/            # Custom React hooks (e.g., useScrollAnimation)
+├── lib/              # Core libraries & utilities (i18n dictionary)
+├── locales/          # JSON translation files (en.json, np.json)
+├── types/            # TypeScript interfaces & type definitions
+└── utils/            # Helper functions (Image assets, formatting)
 public/
-├── images/           # Optimized image assets
+├── images/           # Optimized static images
+├── logos/            # Brand assets
 └── ...
 ```
 
@@ -61,7 +74,7 @@ Follow these steps to set up the project locally:
 
 ## 📦 Build & Deployment
 
-To create a production build:
+To create a production build optimized for performance:
 
 ```bash
 npm run build
@@ -75,8 +88,11 @@ npm start
 
 ## 🤝 Contributing
 
-We welcome contributions! Please ensure you follow the project's coding standards and submit a pull request for review.
+We welcome contributions! Please ensure you follow the project's coding standards:
+-   Use TypeScript for all new files.
+-   Follow the existing component structure.
+-   Ensure responsive design for all UI changes.
 
 ---
 
-© 2025 ITC Beautician Training Institute. All rights reserved.
+© 2025 ITC Beautician Training Institute. Powered by [Ashawn](https://github.com/Ashawn0).
