@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react'
 
-type OverlayVariant = 'dark' | 'light' | 'gradient-bottom' | 'gradient-top' | 'gradient-radial' | 'none'
+type OverlayVariant = 'dark' | 'light' | 'gradient-bottom' | 'gradient-top' | 'gradient-radial' | 'glass' | 'none'
 type TextColor = 'light' | 'dark' | 'auto'
 
 interface TextOverlayProps {
@@ -58,6 +58,13 @@ export default function TextOverlay({
             case 'gradient-radial':
                 return {
                     background: `radial-gradient(circle at center, rgba(0, 0, 0, ${baseOpacity * 0.2}), rgba(0, 0, 0, ${baseOpacity * 0.6}))`
+                }
+            case 'glass':
+                return {
+                    background: `rgba(255, 255, 255, ${baseOpacity * 0.1})`,
+                    backdropFilter: 'blur(12px)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
                 }
             case 'none':
             default:

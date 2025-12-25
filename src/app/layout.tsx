@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getDictionary } from "@/lib/i18n";
+import NoiseOverlay from "@/components/NoiseOverlay";
+import CommandPalette from "@/components/CommandPalette";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -38,7 +40,9 @@ export default async function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased flex flex-col min-h-screen`}
       >
-        <Header nav={dict.nav} />
+        <NoiseOverlay />
+        <Navbar nav={dict.nav} />
+        <CommandPalette />
         <main className="flex-grow">
           {children}
         </main>
