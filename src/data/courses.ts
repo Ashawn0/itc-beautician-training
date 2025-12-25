@@ -6,7 +6,7 @@ export const courses: Course[] = [
         title: 'Beautician Basic Course',
         duration: '2 Months',
         description: 'A perfect foundation course for beginners entering the beauty industry. Students learn essential skin care, hair care, grooming, and makeup fundamentals required for salon work.',
-        image: '/images/uploads/FaceArt_MakeUp (1).jpg',
+        image: '/images/courses/Professional MakeUp Course (2).jpeg',
         whatYouWillLearn: [
             'Basic skin care & facials',
             'Everyday makeup techniques',
@@ -30,7 +30,7 @@ export const courses: Course[] = [
         title: 'Beautician Advance Course',
         duration: '4 Months',
         description: 'An in-depth professional training program designed to upgrade your skills and prepare you for working confidently in salons or running your own beauty business.',
-        image: '/images/uploads/FaceArt_MakeUp (2).jpg',
+        image: '/images/courses/Advance Course.jpeg',
         whatYouWillLearn: [
             'Advanced facial treatments',
             'Advanced hair techniques & chemical treatments',
@@ -77,7 +77,7 @@ export const courses: Course[] = [
         title: 'Professional Makeup Course',
         duration: '1 Month',
         description: 'A complete makeup artistry program for students who want to specialize in bridal, party, photoshoot, and event makeup.',
-        image: '/images/uploads/FaceArt_MakeUp (3).jpg',
+        image: '/images/courses/Professional MakeUp Course (1).jpeg',
         whatYouWillLearn: [
             'Bridal makeup techniques',
             'Party & engagement makeup',
@@ -100,7 +100,7 @@ export const courses: Course[] = [
         title: 'Professional Nail Art Course',
         duration: '1.5 Months',
         description: 'A detailed course covering modern nail artistry, extensions, and salon techniques. Perfect for students aiming to become professional nail technicians.',
-        image: '/images/uploads/FaceArt_MakeUp (4).jpg',
+        image: '/images/renamed/nailart-basic-01.jpg',
         whatYouWillLearn: [
             'Nail extensions (Acrylic & Gel)',
             'Gel polish application',

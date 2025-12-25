@@ -452,5 +452,109 @@
       "course"
     ],
     "alt_text": "Nail art design sample"
+  },
+  {
+    "file": "/images/uploads/FaceArt_MakeUp (1).jpg",
+    "category": "makeup",
+    "course_match": [
+      "Basic Beautician Training"
+    ],
+    "section_match": [
+      "gallery"
+    ],
+    "alt_text": "Makeup training session"
+  },
+  {
+    "file": "/images/uploads/FaceArt_MakeUp (2).jpg",
+    "category": "makeup",
+    "course_match": [
+      "Beautician Advance Course"
+    ],
+    "section_match": [
+      "gallery"
+    ],
+    "alt_text": "Makeup training session"
+  },
+  {
+    "file": "/images/uploads/FaceArt_MakeUp (3).jpg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery"
+    ],
+    "alt_text": "Makeup training session"
+  },
+  {
+    "file": "/images/uploads/FaceArt_MakeUp (4).jpg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery"
+    ],
+    "alt_text": "Makeup training session"
+  },
+  {
+    "file": "/images/courses/Professional MakeUp Course (3).jpeg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery",
+      "course"
+    ],
+    "alt_text": "Professional makeup training"
+  },
+  {
+    "file": "/images/courses/Professional MakeUp Course (4).jpeg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery",
+      "course"
+    ],
+    "alt_text": "Professional makeup training"
+  },
+  {
+    "file": "/images/courses/Professional MakeUp Course (5).jpeg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery",
+      "course"
+    ],
+    "alt_text": "Professional makeup training"
+  },
+  {
+    "file": "/images/courses/Professional MakeUp Course (6).jpeg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery",
+      "course"
+    ],
+    "alt_text": "Professional makeup training"
+  },
+  {
+    "file": "/images/courses/Professional MakeUp Course (7).jpeg",
+    "category": "makeup",
+    "course_match": [
+      "Professional Makeup Training"
+    ],
+    "section_match": [
+      "gallery",
+      "course"
+    ],
+    "alt_text": "Professional makeup training"
   }
 ]
